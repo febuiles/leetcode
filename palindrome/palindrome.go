@@ -27,7 +27,7 @@ func palindrome(head *EduLinkedListNode) bool {
 
 	for fast != nil && fast.next != nil {
 		slow = slow.next
-		fast = slow.next.next
+		fast = fast.next.next
 	}
 
 	cur := reverseList(slow)
