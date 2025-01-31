@@ -24,6 +24,9 @@ func findRepeatedSequences(dna string, k int) Set {
 	hashSet := *NewSet()
 	output := *NewSet()
 	// use a rolling hash for each number
+	// computing the hash takes O(k) initially, O(1) for updates
+	// lookup is O(1)
+	// if we were using substrings, checking against the set would take O(nk)
 	for i := 0; i < length-k+1; i++ {
 		// calculating the first hash is independent of other vals
 		if i == 0 {
