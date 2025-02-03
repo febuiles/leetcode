@@ -28,15 +28,13 @@ func longestLoop(s string) string {
 				longest = length
 				res = s[prevIndex+1 : i+1]
 			}
-		} else {
-			coords[[2]int{x, y}] = i
 		}
-
+		coords[[2]int{x, y}] = i
 	}
 
 	return res
 }
 
 func main() {
-	fmt.Println(longestLoop("du"))
+	fmt.Println(longestLoop("dlur"))
 }
