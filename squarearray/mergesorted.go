@@ -7,12 +7,14 @@ import (
 
 func sortedSquares(nums []int) []int {
 	res := make([]int, len(nums))
-	n := len(nums)
 	left := 0
-	right := n - 1
+	right := len(nums) - 1
+	square := 0
 
+	// start from the right since we know what
+	// the largest number is. If we knew the smallest
+	// we could start from the left?
 	for i := right; i >= 0; i-- {
-		var square int
 		if math.Abs(float64(nums[left])) < math.Abs(float64(nums[right])) {
 			square = nums[right]
 			right--
