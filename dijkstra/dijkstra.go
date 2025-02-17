@@ -4,6 +4,7 @@ import (
 	"math"
 )
 
+// n nodes, starting node k
 func networkDelayTime(times [][]int, n, k int) int {
 	nodes := make(map[int][][]int)
 	visited := make(map[int]bool)
